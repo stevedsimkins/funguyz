@@ -78,7 +78,7 @@ const LandingHero = styled.img`
     margin-top: -20%;
   }
   @media screen and (max-width: 500px){
-    margin-top: -30%;
+    margin-top: -25%;
   }
 
 `;
