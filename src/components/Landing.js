@@ -38,6 +38,9 @@ const LandingNav = styled.div`
   align-items: center;
   margin-right: 25%;
   gap: 4rem;
+  @media screen and (max-width: 400px){
+    gap: 2rem;
+  }
 `;
 
 const TwitterButton = styled.a`
@@ -76,9 +79,6 @@ const LandingHero = styled.img`
   }
   @media screen and (max-width: 500px){
     margin-top: -35%;
-  }
-  @media screen and (max-width: 400px){
-    margin-top: -45%;
   }
 
 `;
