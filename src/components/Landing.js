@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
+import { fade, fade2, fade3 } from '../animations'
 import logo from '../assets/logo.png'
 import landingHero from '../assets/landingHero.gif'
 import twitter from '../assets/twitter2.svg'
@@ -7,7 +9,7 @@ import discord from '../assets/discord2.svg'
 const Landing = () => {
   return (
     <LandingSection className='gradient1'>
-      <LandingNav>
+      <LandingNav variants={fade2} initial="hidden" animate="show">
         <TwitterButton href='https://twitter.com/FunguyzNFT' target='_blank'>
           <img src={twitter} alt='twitter Icon' />
         </TwitterButton>
@@ -15,14 +17,14 @@ const Landing = () => {
           <img src={discord} alt='discord icon' />
         </DiscordButton>
       </LandingNav>
-      <HeroContainer>
-        <Logo src={logo} alt='logo' />
+      <HeroContainer variants={fade} initial="hidden" animate="show">
+        <Logo  src={logo} alt='logo' />
         <LandingHero src={landingHero} alt='funguyz hero' />
         <Copy>
           3,000 Happy-go-lucky Mushroom NFTs Born on the Solana Blockchain
         </Copy>
       </HeroContainer>
-      <MintButton>
+      <MintButton variants={fade3} initial="hidden" animate="show">
         <h4 className='gradientText'>Coming Soon!</h4>
       </MintButton>
     </LandingSection>
@@ -38,7 +40,7 @@ const LandingSection = styled.div`
   flex-direction: column;
 `
 
-const LandingNav = styled.div`
+const LandingNav = styled(motion.div)`
   width: 100%;
   height: 10vh;
   display: flex;
@@ -65,14 +67,14 @@ const DiscordButton = styled.a`
   }
 `
 
-const HeroContainer = styled.div`
+const HeroContainer = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 `;
 
-const Logo = styled.img`
+const Logo = styled(motion.img)`
   max-width: 80%;
   height: auto;
   object-fit: cover;
@@ -100,7 +102,7 @@ const Copy = styled.h2`
   }
 `
 
-const MintButton = styled.button`
+const MintButton = styled(motion.button)`
   width: 320px;
   height: 80px;
   border-radius: 50px;
