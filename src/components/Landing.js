@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { fade, fade2, fade3 } from '../animations'
 import logo from '../assets/logo.png'
-import landingHero from '../assets/landingHero.gif'
+import landingHero from '../assets/landingHero2.gif'
 import twitter from '../assets/twitter2.svg'
 import discord from '../assets/discord2.svg'
 
