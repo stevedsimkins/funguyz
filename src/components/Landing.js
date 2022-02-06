@@ -77,6 +77,9 @@ const Logo = styled.img`
   height: auto;
   object-fit: cover;
   opacity: 90%;
+  @media screen and (max-width: 500px){
+    max-width: 90%;
+  }
 `
 
 const LandingHero = styled.img`
@@ -84,6 +87,9 @@ const LandingHero = styled.img`
   max-width: 50%;
   z-index: 1;
   margin-top: -20%;
+  @media screen and (max-width: 500px){
+    max-width: 60%;
+  }
 `
 
 const Copy = styled.h2`
