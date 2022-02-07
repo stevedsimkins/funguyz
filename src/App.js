@@ -3,7 +3,7 @@ import About from "./components/About"
 
 function App() {
   return (
-    <div className="App">
+    <div className="App gradient2">
       <Landing />
       <About />
     </div>

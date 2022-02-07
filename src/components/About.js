@@ -4,7 +4,7 @@ import aboutHero from '../assets/aboutHero.png'
 
 const About = () => {
   return (
-    <AboutContainer className='gradient3'>
+    <AboutContainer>
       <AboutHero src={aboutHero} alt='About Hero Image' />
       <AboutCopy>
         <AboutBlurb1>

@@ -8,7 +8,7 @@ import discord from '../assets/discord2.svg'
 
 const Landing = () => {
   return (
-    <LandingContainer className='gradient1'>
+    <LandingContainer>
       <LandingNav variants={fade2} initial="hidden" animate="show">
         <TwitterButton href='https://twitter.com/FunguyzNFT' target='_blank'>
           <img src={twitter} alt='twitter Icon' />
