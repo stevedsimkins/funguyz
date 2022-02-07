@@ -8,7 +8,7 @@ import discord from '../assets/discord2.svg'
 
 const Landing = () => {
   return (
-    <LandingSection className='gradient1'>
+    <LandingContainer className='gradient1'>
       <LandingNav variants={fade2} initial="hidden" animate="show">
         <TwitterButton href='https://twitter.com/FunguyzNFT' target='_blank'>
           <img src={twitter} alt='twitter Icon' />
@@ -27,11 +27,11 @@ const Landing = () => {
       <MintButton variants={fade3} initial="hidden" animate="show">
         <h4 className='gradientText'>Coming Soon!</h4>
       </MintButton>
-    </LandingSection>
+    </LandingContainer>
   )
 }
 
-const LandingSection = styled.div`
+const LandingContainer = styled.div`
   min-height: 100vh;
   width: 100%;
   display: flex;

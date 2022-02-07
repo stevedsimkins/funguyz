@@ -90,8 +90,11 @@ const GlobalStyle = createGlobalStyle`
  .gradient2 {
     background: radial-gradient(41.06% 60.82% at 30.76% 58.94%, rgba(99, 232, 185, 0.78) 0%, rgba(99, 232, 185, 0) 100%),
 linear-gradient(108.73deg, #6687E7 31.33%, #6AF1EA 92.6%);
-
  }
+
+  .gradient3 {
+    background: linear-gradient(64.25deg, #6687E7 0.04%, #69B2F1 30.92%, #69C3DB 64.81%, #6AF1EA 95.7%);
+  }
 
 `
 export default GlobalStyle;
