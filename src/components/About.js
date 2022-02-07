@@ -64,8 +64,10 @@ const AboutContainer = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1rem;
   @media screen and (max-width: 1000px) {
     flex-direction: column;
+    padding-bottom: 1rem;
   }
 `
 
