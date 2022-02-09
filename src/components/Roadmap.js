@@ -31,6 +31,9 @@ const RoadmapContainer = styled(motion.div)`
   h1 {
     margin-top: 3rem;
   }
+  @media screen and (max-width: 500px){
+  width: 100%;
+}
 `
 const RoadmapPhaseContainer = styled(motion.div)`
   display: grid;
