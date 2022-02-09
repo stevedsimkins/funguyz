@@ -16,7 +16,7 @@ const PhaseCard = (props) => {
             <li><h4>{props.point3}</h4></li>
           </ul>
         </PhaseList>
-        <ExpandButton><h5 className="gradientText">More Details</h5></ExpandButton>
+        <ExpandButton onClick={() => alert("test")}><h5 className="gradientText">More Details</h5></ExpandButton>
       </PhaseCardInner>
     </PhaseCardContainer>
   )
@@ -98,7 +98,9 @@ const ExpandButton = styled.button`
   border: none;
   border-radius: 30px;
   margin: 1rem 0rem;
-padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  z-index: 2;
 `
 
 export default PhaseCard;
