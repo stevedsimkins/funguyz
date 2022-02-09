@@ -1,0 +1,104 @@
+import styled from "styled-components"
+import { motion } from "framer-motion"
+
+const PhaseCard = (props) => {
+  return (
+    <PhaseCardContainer>
+      <h2>{props.phase}</h2>
+      <PhaseCardInner>
+        <PhaseImg>
+          <img src={props.img} alt={props.imageName} />
+        </PhaseImg>
+        <PhaseList>
+          <ul>
+            <li><h4>{props.point1}</h4></li>
+            <li><h4>{props.point2}</h4></li>
+            <li><h4>{props.point3}</h4></li>
+          </ul>
+        </PhaseList>
+        <ExpandButton><h5 className="gradientText">More Details</h5></ExpandButton>
+      </PhaseCardInner>
+    </PhaseCardContainer>
+  )
+}
+
+const PhaseCardContainer = styled(motion.div)`
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+`
+
+const PhaseCardInner = styled(motion.div)`
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  :before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    border: 4px solid transparent;
+    background: linear-gradient(152deg, red, orange, yellow, green, blue, purple) border-box;
+    -webkit-mask: /*4*/
+       linear-gradient(#fff 0 0) padding-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; /*5'*/
+            mask-composite: exclude; /*5*/
+  }
+`
+const PhaseImg = styled(motion.div)`
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: auto;
+    width: 350px;
+    object-fit: cover;
+    margin-top: 3rem;
+    border-radius: 30px;
+  }
+`
+
+const PhaseList = styled.div`
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  ul {
+    list-style: none;
+  }
+  li {
+    padding: 1rem 0rem 0rem 2rem;
+    padding-left: 2rem;
+    text-indent: -0.75rem;
+  }
+  h4:before {
+    content: ' 🍄 '
+  }
+`
+
+const ExpandButton = styled.button`
+  background: white;
+  border: none;
+  border-radius: 30px;
+  margin: 1rem 0rem;
+padding: 0.75rem 1.5rem;
+`
+
+export default PhaseCard;
