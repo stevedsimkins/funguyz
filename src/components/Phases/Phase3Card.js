@@ -152,6 +152,11 @@ const ModalMain = styled(motion.img)`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 11;
+  @media screen and (max-width: 700px){
+    width: 90%;
+    height: auto;
+  }
+
 `
 
 const CloseButton = styled.button`
