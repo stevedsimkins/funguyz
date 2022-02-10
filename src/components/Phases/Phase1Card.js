@@ -56,6 +56,11 @@ const PhaseCardContainer = styled(motion.div)`
   align-items: center;
   flex-direction: column;
   padding: 1rem;
+  @media screen and (max-width: 500px){
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
 `
 
 const PhaseCardInner = styled(motion.div)`
@@ -96,6 +101,11 @@ const PhaseImg = styled(motion.div)`
     margin-top: 3rem;
     border-radius: 30px;
   }
+  @media screen and (max-width: 500px){
+    img {
+    width: 90%;
+    }
+  }
 `
 
 const PhaseList = styled.div`
@@ -116,6 +126,11 @@ const PhaseList = styled.div`
   }
   h4:before {
     content: ' 🍄 '
+  }
+  @media screen and (max-width: 500px){
+    h4 {
+      font-size: 21px;
+    }
   }
 `
 
