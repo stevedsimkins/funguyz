@@ -1,24 +1,40 @@
+import { useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
+import phase1Image from "../../assets/phase1card.png"
+import phase1Poster from "../../assets/phase1Poster.png"
 
-const PhaseCard = (props) => {
+
+const PhaseCard = () => {
+  
+  const [showPhase,setShowPhase] = useState(false)
+
   return (
     <PhaseCardContainer>
-      <h2>{props.phase}</h2>
+    {showPhase ? <Modal /> : null}
+      <h2>Phase 1</h2>
       <PhaseCardInner>
         <PhaseImg>
-          <img src={props.img} alt={props.imageName} />
+          <img src={phase1Image} alt="Phase 1 FunGuy" />
         </PhaseImg>
         <PhaseList>
           <ul>
-            <li><h4>{props.point1}</h4></li>
-            <li><h4>{props.point2}</h4></li>
-            <li><h4>{props.point3}</h4></li>
+            <li><h4>Collabs and Partnerships</h4></li>
+            <li><h4>Giveaways and WL Begin</h4></li>
+            <li><h4>Launch on Magic Eden</h4></li>
           </ul>
         </PhaseList>
-        <ExpandButton onClick={() => alert("test")}><h5 className="gradientText">More Details</h5></ExpandButton>
+        <ExpandButton onClick={()=> setShowPhase(true)}><h5 className="gradientText">More Details</h5></ExpandButton>
       </PhaseCardInner>
     </PhaseCardContainer>
+  )
+}
+
+const Modal = () => {
+  return (
+    <ModalContainer>
+      <ModalMain src={phase1Poster} alt="Phase 1 Roadmap Poster" />
+    </ModalContainer>
   )
 }
 
@@ -101,6 +117,26 @@ const ExpandButton = styled.button`
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   z-index: 2;
+`
+
+const ModalContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 10;
+`
+
+const ModalMain = styled(motion.img)`
+  position: fixed;
+  width: 80%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
 `
 
 export default PhaseCard;

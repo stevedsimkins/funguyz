@@ -1,20 +1,20 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
-import PhaseCard from "./PhaseCard"
-import phase1Image from "../assets/phase1card.png"
-import phase2Image from "../assets/phase2card.png"
-import phase3Image from "../assets/phase3card.gif"
-import phase4Image from "../assets/phase4card.png"
+import Phase1Card from "./Phases/Phase1Card"
+import Phase2Card from "./Phases/Phase2Card"
+import Phase3Card from "./Phases/Phase3Card"
+import Phase4Card from "./Phases/Phase4Card"
+
 
 const Roadmap = () => {
   return (
     <RoadmapContainer>
       <h1>Roadmap</h1>
       <RoadmapPhaseContainer>
-        <PhaseCard phase="Phase 1" img={phase1Image} point1="Collabs and Partnerships" point2="Giveaways and WL Begin" point3="Launch on Magic Eden"  />
-        <PhaseCard phase="Phase 2" img={phase2Image} point1="Open Staking Platform" point2="SolaLand Verification" point3="Aidrop FREE Fungies NFT" />
-        <PhaseCard phase="Phase 3" img={phase3Image} point1="3D FunGuyz PFP Launch" point2="ShroomStead Development" point3="Launch FUN Store"/>
-        <PhaseCard phase="Phase 4" img={phase4Image} point1="ShroomSteads Launch" point2="Begin FunForest Metaverse" point3="Full Body 3D Avatars"/>
+        <Phase1Card />
+        <Phase2Card />
+        <Phase3Card />
+        <Phase4Card />
       </RoadmapPhaseContainer>
     </RoadmapContainer>
   )
