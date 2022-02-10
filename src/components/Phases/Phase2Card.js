@@ -9,9 +9,13 @@ const PhaseCard = () => {
   
   const [showPhase,setShowPhase] = useState(false)
 
+  const openModal = () => {
+    setShowPhase(true)
+  }
+
   return (
     <PhaseCardContainer>
-    {showPhase ? <Modal /> : null}
+    {showPhase ? <Modal setShowPhase={setShowPhase} showPhase={showPhase} /> : null}
       <h2>Phase 1</h2>
       <PhaseCardInner>
         <PhaseImg>
@@ -24,16 +28,22 @@ const PhaseCard = () => {
             <li><h4>Aidrop FREE Fungies NFT</h4></li>
           </ul>
         </PhaseList>
-        <ExpandButton onClick={()=> setShowPhase(true)}><h5 className="gradientText">More Details</h5></ExpandButton>
+        <ExpandButton onClick={openModal}><h5 className="gradientText">More Details</h5></ExpandButton>
       </PhaseCardInner>
     </PhaseCardContainer>
   )
 }
 
-const Modal = () => {
+const Modal = ({ setShowPhase }) => {
+
+  const closeModal = () => {
+    setShowPhase(false)
+  }
+
   return (
     <ModalContainer>
       <ModalMain src={phase2Poster} alt="Phase 2 Roadmap Poster" />
+      <CloseButton onClick={closeModal}><h5 className="gradientText">Close</h5></CloseButton>
     </ModalContainer>
   )
 }
@@ -120,6 +130,10 @@ const ExpandButton = styled.button`
 `
 
 const ModalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   position: fixed;
   top: 0;
   left: 0;
@@ -131,12 +145,26 @@ const ModalContainer = styled.div`
 
 const ModalMain = styled(motion.img)`
   position: fixed;
-  width: 80%;
-  height: auto;
+  width: auto;
+  height: 90%;
+  object-fit: cover;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 11;
+`
+
+const CloseButton = styled.button`
+  bottom: 0;
+  left: 50%;
+  transform: translate(0%, -50%);
+  z-index: 12;
+  background: white;
+  border: none;
+  border-radius: 30px;
+  margin: 1rem auto;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
 `
 
 export default PhaseCard;
