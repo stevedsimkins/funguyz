@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
   .App {
     min-height: 100vh;
+    overflow: hidden;
   }
 
   body {
