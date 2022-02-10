@@ -16,7 +16,7 @@ const About = () => {
         </AboutBlurb1>
         <AboutBlurb2>
           <h2>How much are they?</h2>
-          <h5>Joining the Fun Fam is just 0.7 SOL.</h5>
+          <h5>TBD!</h5>
         </AboutBlurb2>
         <AboutBlurb3>
           <h2>Wen Mint?</h2>
