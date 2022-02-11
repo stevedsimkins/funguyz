@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Open Sans", sans-serif;
     color: white;
+    background-color: #5c88ee;
   }
 
   .logo {
