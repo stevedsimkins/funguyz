@@ -89,20 +89,13 @@ const AboutCopy = styled(motion.div)`
   @media screen and (max-width: 1000px) {
     max-width: 90%;
   }
+  padding-right: 2rem;
 `
 
 const AboutBlurb1 = styled(motion.div)``
 const AboutBlurb2 = styled(motion.div)`
-  padding-left: 2rem;
-  @media screen and (max-width: 1000px) {
-    padding-left: 0;
-  }
 `
 const AboutBlurb3 = styled(motion.div)`
-  padding-left: 3rem;
-  @media screen and (max-width: 1000px) {
-    padding-left: 0;
-  }
 `
 const AboutBlurb4 = styled(motion.div)`
   ul {
