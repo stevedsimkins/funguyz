@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import aboutHero from '../assets/aboutHero.png'
+import { fade } from "../animations"
 
 const About = () => {
   return (
-    <AboutContainer>
+    <AboutContainer >
       <AboutHero src={aboutHero} alt='About Hero Image' />
       <AboutCopy>
         <AboutBlurb1>

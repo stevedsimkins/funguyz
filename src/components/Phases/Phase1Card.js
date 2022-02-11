@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import phase1Image from "../../assets/phase1card.png"
 import phase1Poster from "../../assets/phase1Poster.png"
-
+import {rotate} from "../../animations"
 
 const PhaseCard = () => {
   
@@ -156,6 +156,7 @@ const ModalContainer = styled.div`
   height: 100%;
   background: rgba(0,0,0,0.6);
   z-index: 10;
+  transition: all ease 2s;
 `
 
 const ModalMain = styled(motion.img)`

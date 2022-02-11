@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { fade, fade2, fade3 } from '../animations'
+import { container, item } from '../animations'
 import logo from '../assets/logo.png'
 import landingHero from '../assets/landingHero2.gif'
 import twitter from '../assets/twitter2.svg'
@@ -8,30 +8,30 @@ import discord from '../assets/discord2.svg'
 
 const Landing = () => {
   return (
-    <LandingContainer>
-      <LandingNav variants={fade2} initial="hidden" animate="show">
-        <TwitterButton href='https://twitter.com/FunguyzNFT' target='_blank'>
+    <LandingContainer variants={container} initial="hidden" animate="show">
+      <LandingNav variants={container}>
+        <TwitterButton variants={item} href='https://twitter.com/FunguyzNFT' target='_blank'>
           <img src={twitter} alt='twitter Icon' />
         </TwitterButton>
-        <DiscordButton href='https://discord.gg/d7NxUfYwDy' target='_blank'>
+        <DiscordButton variants={item} href='https://discord.gg/d7NxUfYwDy' target='_blank'>
           <img src={discord} alt='discord icon' />
         </DiscordButton>
       </LandingNav>
-      <HeroContainer variants={fade} initial="hidden" animate="show">
-        <Logo  src={logo} alt='logo' />
-        <LandingHero src={landingHero} alt='funguyz hero' />
-        <Copy>
+      <HeroContainer variants={container}>
+        <Logo variants={item} src={logo} alt='logo' />
+        <LandingHero variants={item} src={landingHero} alt='funguyz hero' />
+        <Copy variants={item}>
           3,000 Happy-go-lucky Mushroom NFTs Born on the Solana Blockchain
         </Copy>
       </HeroContainer>
-      <MintButton variants={fade3} initial="hidden" animate="show">
+      <MintButton variants={item}>
         <h4 className='gradientText'>Coming Soon!</h4>
       </MintButton>
     </LandingContainer>
   )
 }
 
-const LandingContainer = styled.div`
+const LandingContainer = styled(motion.div)`
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -53,14 +53,14 @@ const LandingNav = styled(motion.div)`
   }
 `
 
-const TwitterButton = styled.a`
+const TwitterButton = styled(motion.a)`
   img {
     height: 50px;
     widith: 50px;
   }
 `
 
-const DiscordButton = styled.a`
+const DiscordButton = styled(motion.a)`
   img {
     height: 50px;
     width: 50px;
@@ -84,7 +84,7 @@ const Logo = styled(motion.img)`
   }
 `
 
-const LandingHero = styled.img`
+const LandingHero = styled(motion.img)`
   height: auto;
   max-width: 50%;
   z-index: 1;
@@ -94,7 +94,7 @@ const LandingHero = styled.img`
   }
 `
 
-const Copy = styled.h2`
+const Copy = styled(motion.h2)`
   max-width: 800px;
   text-align: center;
   @media screen and (max-width: 600px) {
