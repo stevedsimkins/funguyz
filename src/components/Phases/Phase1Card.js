@@ -25,7 +25,7 @@ const PhaseCard = () => {
           <ul>
             <li><h4>Collabs and Partnerships</h4></li>
             <li><h4>Giveaways and WL Begin</h4></li>
-            <li><h4>Launch on Magic Eden</h4></li>
+            <li><h4>Launch Q1 2022</h4></li>
           </ul>
         </PhaseList>
         <ExpandButton onClick={openModal}><h5 className="gradientText">More Details</h5></ExpandButton>
