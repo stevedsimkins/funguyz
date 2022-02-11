@@ -1,6 +1,7 @@
 import Landing from "./components/Landing"
 import About from "./components/About"
 import Roadmap from "./components/Roadmap"
+import Creators from "./components/Creators"
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Landing />
       <About />
       <Roadmap />
+      <Creators />
     </div>
   );
 }
