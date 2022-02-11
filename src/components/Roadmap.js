@@ -37,10 +37,13 @@ const RoadmapContainer = styled(motion.div)`
 `
 const RoadmapPhaseContainer = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+  grid-template-columns: repeat(2, minmax(400px, 1fr)); 
   width: 100%;
   height: 100%;
   grid-gap: 5rem;
+  @media screen and (max-width: 1200px){
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
 `
 
 export default Roadmap;
