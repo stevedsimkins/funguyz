@@ -102,8 +102,10 @@ const PhaseImg = styled(motion.div)`
     border-radius: 30px;
   }
   @media screen and (max-width: 500px){
+    min-height: 400px;
     img {
       width: 90%;
+      margin-top: 1rem;
     }
   }
 
@@ -129,6 +131,7 @@ const PhaseList = styled.div`
     content: ' 🍄 '
   }
   @media screen and (max-width: 500px){
+    padding: 0rem;
     h4 {
       font-size: 21px;
     }

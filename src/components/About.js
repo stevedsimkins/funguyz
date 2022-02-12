@@ -7,22 +7,22 @@ const About = () => {
     <AboutContainer>
       <AboutHero src={aboutHero} alt='About Hero Image' />
       <AboutCopy>
-        <AboutBlurb1>
+        <AboutBlurb>
           <h2>What Are FunGuyz?</h2>
           <h5>
             Fun Guyz is a collection of 3,000 hand-drawn mushroom characters
             born on the Solana blockchain.
           </h5>
-        </AboutBlurb1>
-        <AboutBlurb2>
+        </AboutBlurb>
+        <AboutBlurb>
           <h2>How much are they?</h2>
           <h5>TBD!</h5>
-        </AboutBlurb2>
-        <AboutBlurb3>
+        </AboutBlurb>
+        <AboutBlurb>
           <h2>Wen Mint?</h2>
           <h5>Fun Fam membership begins Q1 2022</h5>
-        </AboutBlurb3>
-        <AboutBlurb4>
+        </AboutBlurb>
+        <AboutBlurbList>
           <h2>FunGuyz Benefits</h2>
           <h5>
             Well, you could enjoy all the unique benefits of holding Fun Guyz
@@ -52,7 +52,7 @@ const About = () => {
             that it’s possible to chase your dreams and launch a successful NFT
             collection.
           </h5>
-        </AboutBlurb4>
+        </AboutBlurbList>
       </AboutCopy>
     </AboutContainer>
   )
@@ -86,21 +86,41 @@ const AboutCopy = styled(motion.div)`
   justify-content: center;
   height: 100%;
   gap: 3rem;
+  padding-right: 2rem;
   @media screen and (max-width: 1000px) {
     max-width: 90%;
   }
-  padding-right: 2rem;
+  @media screen and (max-width: 500px){
+  padding: 0;
+  }
 `
 
-const AboutBlurb1 = styled(motion.div)``
-const AboutBlurb2 = styled(motion.div)`
+const AboutBlurb = styled(motion.div)`
+  @media screen and (max-width: 500px){
+    h2 {
+      font-size: 38px; 
+    }
+    h5 {
+      font-size: 16px;
+    }
+}
 `
-const AboutBlurb3 = styled(motion.div)`
-`
-const AboutBlurb4 = styled(motion.div)`
+
+const AboutBlurbList = styled(motion.div)`
   ul {
     padding-left: 3rem;
   }
+  @media screen and (max-width: 500px){
+  h2 {
+    font-size: 38px; 
+  }
+  h5 {
+    font-size: 16px;
+  }
+  ul {
+    padding-left: 2rem;
+  }
+
 `
 
 export default About

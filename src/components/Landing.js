@@ -103,12 +103,11 @@ const Copy = styled.h2`
 `
 
 const MintButton = styled(motion.button)`
-  width: 320px;
-  height: 80px;
   border-radius: 50px;
   backround: white;
   border: none;
   margin: 1rem 0rem;
+  padding: 1rem 2rem;
 `
 
 export default Landing
