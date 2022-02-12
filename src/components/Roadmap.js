@@ -43,6 +43,9 @@ const RoadmapPhaseContainer = styled(motion.div)`
   grid-gap: 5rem;
   @media screen and (max-width: 1200px){
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  @media screen and (max-width: 400px){
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 `
 

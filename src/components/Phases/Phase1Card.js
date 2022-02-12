@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import phase1Image from "../../assets/phase1card.png"
 import phase1Poster from "../../assets/phase1Poster.png"
-import {rotate} from "../../animations"
 
 const PhaseCard = () => {
   
