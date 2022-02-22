@@ -20,7 +20,7 @@ const About = () => {
         </AboutBlurb>
         <AboutBlurb>
           <h2>Wen Mint?</h2>
-          <h5>Fun Fam membership begins Q1 2022</h5>
+          <h5>Fun Fam membership begins March 26th, 2022. Whitelist at 1pm EST, public at 4pm EST</h5>
         </AboutBlurb>
         <AboutBlurbList>
           <h2>FunGuyz Benefits</h2>

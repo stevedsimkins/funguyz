@@ -1,3 +1,4 @@
+import Countdown from "react-countdown"
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { fade, fade2, fade3 } from '../animations'
@@ -25,7 +26,9 @@ const Landing = () => {
         </Copy>
       </HeroContainer>
       <MintButton variants={fade3} initial="hidden" animate="show">
-        <h4 className='gradientText'>Coming Soon!</h4>
+        <h4 className='gradientText'>
+          <Countdown date={new Date("March 26, 2022 21:00:00")} /> 
+        </h4>
       </MintButton>
     </LandingContainer>
   )
