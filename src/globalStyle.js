@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: "Open Sans", sans-serif;
-    color: white;
+    color: #6687E7;
     background-color: #5c88ee;
   }
 

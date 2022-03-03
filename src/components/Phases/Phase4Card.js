@@ -56,6 +56,9 @@ const PhaseCardContainer = styled(motion.div)`
   align-items: center;
   flex-direction: column;
   padding: 1rem;
+  h2 {
+    color: white;
+  }
   @media screen and (max-width: 500px){
     width: 90%;
     margin: 0 auto;
@@ -71,22 +74,9 @@ const PhaseCardInner = styled(motion.div)`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  :before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 30px;
-    border: 4px solid transparent;
-    background: linear-gradient(152deg, red, orange, yellow, green, blue, purple) border-box;
-    -webkit-mask: /*4*/
-       linear-gradient(#fff 0 0) padding-box, 
-       linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor; /*5'*/
-            mask-composite: exclude; /*5*/
-  }
+  border: 10px solid #6687E7;
+  border-radius: 15px;
+  background: white;
 `
 const PhaseImg = styled(motion.div)`
   min-height: 500px;
@@ -102,13 +92,14 @@ const PhaseImg = styled(motion.div)`
     border-radius: 30px;
   }
   @media screen and (max-width: 500px){
-    min-height: 400px;
     img {
-      width: 90%;
-      margin-top: 1rem;
+    width: 90%;
     }
   }
-
+  @media screen and (max-width: 400px) {
+    min-height: 400px;
+    margin-top: 1rem;
+  }
 `
 
 const PhaseList = styled.div`
@@ -136,12 +127,11 @@ const PhaseList = styled.div`
       font-size: 21px;
     }
   }
-
 `
 
 const ExpandButton = styled.button`
   background: white;
-  border: none;
+  border: 5px solid #6687E7;
   border-radius: 30px;
   margin: 1rem 0rem;
   padding: 0.75rem 1.5rem;
@@ -176,7 +166,6 @@ const ModalMain = styled(motion.img)`
     width: 90%;
     height: auto;
   }
-
 `
 
 const CloseButton = styled.button`

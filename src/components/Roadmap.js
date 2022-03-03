@@ -9,7 +9,7 @@ import Phase4Card from "./Phases/Phase4Card"
 const Roadmap = () => {
   return (
     <RoadmapContainer>
-      <h1>Roadmap</h1>
+      <h1 style={{color: "white"}}>Roadmap</h1>
       <RoadmapPhaseContainer>
         <Phase1Card />
         <Phase2Card />

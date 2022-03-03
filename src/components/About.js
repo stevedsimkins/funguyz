@@ -96,6 +96,10 @@ const AboutCopy = styled(motion.div)`
 `
 
 const AboutBlurb = styled(motion.div)`
+  background: white;
+  border: 10px solid #6687E7;
+  border-radius: 15px;
+  padding: 1rem;
   @media screen and (max-width: 500px){
     h2 {
       font-size: 38px; 
@@ -107,6 +111,10 @@ const AboutBlurb = styled(motion.div)`
 `
 
 const AboutBlurbList = styled(motion.div)`
+  background: white;
+  border: 10px solid #6687E7;
+  border-radius: 15px;
+  padding: 1rem;
   ul {
     padding-left: 3rem;
   }

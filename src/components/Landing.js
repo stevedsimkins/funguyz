@@ -21,9 +21,11 @@ const Landing = () => {
       <HeroContainer variants={fade} initial="hidden" animate="show">
         <Logo  src={logo} alt='logo' />
         <LandingHero src={landingHero} alt='funguyz hero' />
-        <Copy>
-          3,000 Happy-go-lucky Mushroom NFTs Born on the Solana Blockchain
-        </Copy>
+        <CopyContainer>
+          <Copy>
+            3,000 Happy-go-lucky Mushroom NFTs Born on the Solana Blockchain
+          </Copy>
+        </CopyContainer>
       </HeroContainer>
       <MintButton variants={fade3} initial="hidden" animate="show">
         <h4 className='gradientText'>
@@ -97,6 +99,16 @@ const LandingHero = styled.img`
   }
 `
 
+const CopyContainer = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 1rem;
+  border: 10px solid #6687E7;
+  border-radius: 15px;
+`
+
 const Copy = styled.h2`
   max-width: 800px;
   text-align: center;
@@ -106,9 +118,9 @@ const Copy = styled.h2`
 `
 
 const MintButton = styled(motion.button)`
-  border-radius: 50px;
+  border-radius: 15px;
   backround: white;
-  border: none;
+  border: 10px solid #6687E7;
   margin: 1rem 0rem;
   padding: 1rem 2rem;
 `

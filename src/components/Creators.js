@@ -54,6 +54,7 @@ const CreatorsContainer = styled(motion.div)`
   align-items: center;
   gap: 4rem;
   h1 {
+    color: white;
     padding-top: 5rem;
 }
 `
@@ -64,15 +65,19 @@ const CreatorCard = styled(motion.div)`
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
+  border: 10px solid #6687E7;
+  border-radius: 15px;
+  background: white;
+  padding: 2rem;
   @media screen and (max-width: 1100px){
     flex-direction: column;
   }
 `
 const CreatorImage = styled(motion.img)`
-  width: 35%;
+  width: 450px;
   height: auto;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 15px;
   @media screen and (max-width: 1100px){
     width: 100%;
   }
