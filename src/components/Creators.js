@@ -72,6 +72,9 @@ const CreatorCard = styled(motion.div)`
   @media screen and (max-width: 1100px){
     flex-direction: column;
   }
+  @media screen and (max-width: 600px){
+    width: 90%;
+  }
 `
 const CreatorImage = styled(motion.img)`
   width: 450px;
