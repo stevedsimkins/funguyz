@@ -68,14 +68,6 @@ const App = () => {
     ],
     [],
   );
-//Add in Home when time to mint
-// <Home
-  //candyMachineId={candyMachineId}
-  //connection={connection}
-  //startDate={startDateSeed}
-  //txTimeout={txTimeoutInMilliseconds}
-  //rpcHost={rpcHost}
-///>
   return (
     <ThemeProvider theme={theme}>
       <ConnectionProvider endpoint={endpoint}>
@@ -83,13 +75,13 @@ const App = () => {
           <WalletDialogProvider>
             <div className='gradient2'>
             <Landing />
-             <Home
+            {/*<Home
               candyMachineId={candyMachineId}
               connection={connection}
               startDate={startDateSeed}
               txTimeout={txTimeoutInMilliseconds}
               rpcHost={rpcHost}
-            />
+            /> */}
             <About />
             <Roadmap />
             <Creators />
