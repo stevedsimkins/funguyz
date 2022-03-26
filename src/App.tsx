@@ -12,6 +12,7 @@ import {
 } from '@solana/wallet-adapter-wallets';
 
 import Home from "./Home"
+import StakeButton from "./StakeButton"
 import Landing from "./components/Landing"
 import About from "./components/About"
 import Roadmap from "./components/Roadmap"
@@ -82,6 +83,7 @@ const App = () => {
               txTimeout={txTimeoutInMilliseconds}
               rpcHost={rpcHost}
             />
+						<StakeButton />	
             <About />
             <Roadmap />
             <Creators />

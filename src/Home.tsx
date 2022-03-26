@@ -167,7 +167,7 @@ const Home = (props: HomeProps) => {
   ]);
 
   return (
-    <Container style={{ marginBottom: 100, zIndex: 3 }}>
+    <Container style={{ marginBottom: 20, marginTop: 20, zIndex: 3 }}>
       <Container maxWidth="xs" style={{ position: 'relative' }}>
         <Paper
           style={{ padding: 12, backgroundColor: '#6687e7', borderRadius: 15 }}
