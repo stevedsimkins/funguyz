@@ -75,13 +75,13 @@ const App = () => {
           <WalletDialogProvider>
             <div className='gradient2'>
             <Landing />
-            {/*<Home
+            <Home
               candyMachineId={candyMachineId}
               connection={connection}
               startDate={startDateSeed}
               txTimeout={txTimeoutInMilliseconds}
               rpcHost={rpcHost}
-            /> */}
+            />
             <About />
             <Roadmap />
             <Creators />
