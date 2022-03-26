@@ -18,6 +18,7 @@ import About from "./components/About"
 import Roadmap from "./components/Roadmap"
 import Creators from "./components/Creators"
 import Footer from "./components/Footer"
+import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
 
 import {
   ConnectionProvider,
@@ -83,6 +84,14 @@ const App = () => {
               txTimeout={txTimeoutInMilliseconds}
               rpcHost={rpcHost}
             />
+						<div style={{display: 'flex', justifyContent: 'center', marginBottom: '20px'}}>
+							<CrossmintPayButton
+								collectionTitle="FUNGUYZ"
+								collectionDescription="3,000 happy-go-lucky mushrooms born on the Solana blockchain. Come join the 'Fun Fam' with the best mushrooms in the Metaverse!"
+								collectionPhoto=""
+								clientId="fc4781f3-15f3-4003-adb7-ebcad2786c2d"
+							/>
+						</div>
 						<StakeButton />	
             <About />
             <Roadmap />
