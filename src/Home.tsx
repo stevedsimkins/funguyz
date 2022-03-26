@@ -201,12 +201,6 @@ const Home = (props: HomeProps) => {
                       isMinting={isUserMinting}
                       onMint={onMint}
                     />
-										<CrossmintPayButton
-												collectionTitle="FUNGUYZ"
-												collectionDescription="3,000 happy-go-lucky mushrooms born on the Solana blockchain. Come join the 'Fun Fam' with the best mushrooms in the Metaverse!"
-												collectionPhoto=""
-												clientId="fc4781f3-15f3-4003-adb7-ebcad2786c2d"
-										/>
                   </GatewayProvider>
                 ) : (<>
                   <MintButton
@@ -214,12 +208,6 @@ const Home = (props: HomeProps) => {
                     isMinting={isUserMinting}
                     onMint={onMint}
                   />
-									<CrossmintPayButton
-											collectionTitle="FUNGUYZ"
-											collectionDescription="3,000 happy-go-lucky mushrooms born on the Solana blockchain. Come join the 'Fun Fam' with the best mushrooms in the Metaverse!"
-											collectionPhoto=""
-											clientId="fc4781f3-15f3-4003-adb7-ebcad2786c2d"
-									/>
 									</>
                 )}
               </MintContainer>
